@@ -1,0 +1,416 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+}
+
+body::after {
+  background-color: hsl(207, 33%, 95%);
+  border-bottom-left-radius: 100px;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50vh;
+  width: 50vw;
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem auto;
+  width: 80%;
+  align-items: center;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+ul#mobile {
+  position: relative;
+  padding: 0;
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+header nav#desktop ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+header nav#desktop ul li#btn {
+  opacity: 0.5;
+  margin-left: 5rem;
+}
+
+/* li#btn::after {
+  border-radius: 50%;
+  background-color: hsl(203, 100%, 45%);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-40px, -50%);
+  opacity: 0.5;
+  height: 8px;
+  width: 8px;
+} */
+
+header nav#desktop ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+main section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  height: 80vh;
+}
+
+main section div.first {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 50%;
+}
+
+main section div.first div.beforeHeading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+main section div.first div.beforeHeading p {
+  opacity: 0.3;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+  margin: 0;
+}
+
+main section div.first span {
+  background-color: black;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  opacity: 1;
+}
+
+main section div.first h1 {
+  text-transform: uppercase;
+  color: hsl(230, 29%, 20%);
+  font-size: 3.3rem;
+  width: 100%;
+  font-weight: bolder;
+}
+
+main section div.first p {
+  opacity: 0.6;
+  width: 100%;
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+}
+
+main section div.first div.CTA {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+main section div.first div.CTA button {
+  border: none;
+  font-size: 1rem;
+  color: white;
+  width: 70%;
+  text-transform: uppercase;
+  /* width: fit-content; */
+  background-color: hsl(0, 100%, 68%);
+  border-radius: 5px;
+  padding: 1rem 2rem;
+}
+
+main section div.first div.CTA button:hover {
+  background-color: hsl(0, 100%, 81%);
+  cursor: pointer;
+}
+
+main section div.first div.CTA p {
+  margin: 0;
+  opacity: 0.4;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  width: 100%;
+}
+
+main section div.hero {
+  width: 50%;
+  margin-right: 0;
+  position: absolute;
+  right: 0;
+  /* top: 30%; */
+}
+
+main section div.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+@media (max-width: 1300px) {
+  main section {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: auto;
+  }
+
+  main section div.first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  main section div.first h1 {
+    text-transform: uppercase;
+    color: hsl(230, 29%, 20%);
+    font-size: 2.3rem;
+    width: auto;
+    margin: auto;
+    font-weight: bolder;
+  }
+
+  main section div.first p {
+    opacity: 0.6;
+    width: auto;
+    text-align: center;
+    margin: auto;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+  }
+
+  main section div.first div.CTA {
+    margin-bottom: 6rem;
+    gap: 1rem;
+  }
+  main section div.first div.CTA button {
+    border: none;
+    font-size: 1rem;
+    color: white;
+    width: fit-content;
+    text-transform: uppercase;
+    /* width: fit-content; */
+    background-color: hsl(0, 100%, 68%);
+    border-radius: 5px;
+    padding: 1rem 2rem;
+  }
+
+  main section div.first div.CTA p {
+    margin: 0;
+    opacity: 0.4;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    width: auto;
+  }
+
+  main section div.hero {
+    width: 100%;
+    margin: auto;
+    position: static;
+    text-align: center;
+  }
+
+  main section div.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: static;
+    margin: 4rem auto 6rem;
+  }
+}
+
+@media (max-width: 800px) {
+  nav#desktop {
+    display: none;
+  }
+
+  header {
+    position: relative;
+  }
+  ul#mobile.show {
+    transform: translateX(0);
+  }
+
+  ul#mobile {
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+    flex-direction: column;
+
+    position: fixed;
+    top: 90px;
+    left: 20px;
+    width: calc(100% - 40px);
+    transform: translateX(120%);
+    z-index: 100;
+    transition: transform 0.4s ease;
+  }
+  ul#mobile {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  ul#mobile li {
+    text-align: center;
+    margin: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  ul#mobile li#btn{
+    opacity: 0.5;
+  }
+
+  ul#mobile li#btn::before {
+    content: "";
+    border-radius: 0;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    transform: translate(0, -25px);
+    height: 3px;
+    background-color: hsl(207, 33%, 95%);
+    width: 100%;
+  }
+
+  .hamburger {
+    position: relative;
+    display: block;
+    width: 55px;
+    z-index: 30;
+    /* height: 35px; */
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+  }
+
+  .hamburger .bar,
+  .hamburger:after,
+  .hamburger:before {
+    content: "";
+    display: block;
+    width: 80%;
+    border-radius: 5px;
+    height: 5px;
+    background-color: #111;
+    margin: 6px 0px;
+    transition: 0.4s;
+  }
+
+  .hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+  }
+
+  .hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px, -8px);
+  }
+
+  .hamburger.is-active .bar {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  main section div.first h1 {
+    text-transform: uppercase;
+    color: hsl(230, 29%, 20%);
+    font-size: 1.3rem;
+    width: auto;
+    margin: auto;
+    font-weight: bolder;
+  }
+
+  main section div.first p {
+    opacity: 0.6;
+    width: auto;
+    text-align: center;
+    margin: auto;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  main section div.first div.CTA {
+    margin-bottom: 3rem;
+    gap: 0.5rem;
+  }
+  main section div.first div.CTA button {
+    border: none;
+    font-size: 0.7rem;
+    color: white;
+    width: fit-content;
+    text-transform: uppercase;
+    /* width: fit-content; */
+    background-color: hsl(0, 100%, 68%);
+    border-radius: 5px;
+    padding: 1rem 2rem;
+  }
+
+  main section div.first div.CTA p {
+    margin: 0;
+    opacity: 0.4;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    width: auto;
+  }
+
+  main section div.first div.beforeHeading {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-align: center;
+  }
+
+  main section div.first div.beforeHeading p {
+    opacity: 0.3;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    margin: 0;
+  }
+
+  main section div.first span {
+    background-color: black;
+    color: white;
+    padding: 0.3rem 0.5rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    opacity: 1;
+  }
+}
